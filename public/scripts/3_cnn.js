@@ -1,42 +1,63 @@
-window.onload = function () {
+// ***********************************
+// *                                 *
+// *  X-Team TensorFlow.js - Logic   *
+// *                                 *
+// ***********************************
 
-  /**
-   * See: https://www.tensorflow.org/tutorials/deep_cnn
-   * See: https://js.tensorflow.org/
-   * See: https://github.com/tensorflow/tfjs-examples
-   */
+/**
+ *  Helpers
+ */
 
-  var CONSTANTS = {
-    LEARNING_RATE: .1,
-    BATCH_SIZE: 64,
-    TRAIN_STEPS: 100,
-    IMAGE_SIZE: 28,
-    LABELS_SIZE: 10,
-    STRIDES: 2,
-    PAD: 0
-  }
-
-  /**
-  var loss = function (labels, ys) {
-    return tf.losses.softmaxCrossEntropy(labels, ys).mean()
-  }
-
-  var model = function (inputXs) {
-    var xs = inputXs.as4D(-1, CONSTANTS.IMAGE_SIZE, CONSTANTS.IMAGE_SIZE, 1)
-    var layer1 = tf.tidy(() => {
-      return xs.conv2d(conv1Weights, 1, 'same')
-        .relu()
-        .maxPool([2, 2], CONSTANTS.strides, CONSTANTS.pad)
-    })
-    var layer2 = tf.tidy(() => {
-      return layer1.conv2d(conv2Weights, 1, 'same')
-        .relu()
-        .maxPool([2, 2], CONSTANTS.strides, CONSTANTS.pad)
-    })
-    return layer2.as2D(-1, fullyConnectedWeights.shape[0])
-      .matMul(fullyConnectedWeights)
-      .add(fullyConnectedBias)
-  }
-   */
-
+const print = function (text) {
+  let el = document.getElementsByClassName('logic')[0]
+  el.append(document.createTextNode(text))
+  el.append(document.createElement('br'))
+  console.log(text)
 }
+
+/**
+ *  Data sets
+ */
+
+const prep = function() {}
+
+const data = fetchWrapper('http://localhost:5555/api/')
+
+/**
+ * TensorFlow.js
+ *
+ * See: https://medium.com/tensorflow/a-gentle-introduction-to-tensorflow-js-dba2e5257702
+ */
+
+const cnn = function (cycles) {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      try {
+       /**
+        model.fit(xs, ys, {
+          batchSize: 1,
+          epochs: cycles
+        }).then(function () {
+          print('')
+          print('Running CNN for: ' + op + ' at ' + cycles + ' epochs')
+          print(model.predict(tf.tensor2d(args['testing'])))
+          print(args['expected'])
+          resolve(print(''))
+        })
+        */
+
+      } catch (ex) {
+        resolve(print(ex))
+      }
+    }, 5000)
+  })
+}
+
+/**
+ * Init
+ */
+
+print('Beginning tests at ' + new Date() + '... this may take a while!')
+cnn(100).then(function (e) {
+  print('Completed tests at ' + new Date() + '... thanks for waiting!')
+})

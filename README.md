@@ -22,6 +22,7 @@ Setup instructions:
 
 Views:
 ```
+    http://localhost:7777/logic
     http://localhost:7777/aapl
 ```
 
