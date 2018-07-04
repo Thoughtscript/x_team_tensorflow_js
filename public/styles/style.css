@@ -49,6 +49,15 @@ main {
     opacity: .7
 }
 
+.logic {
+    position: relative;
+    color: white;
+    width: 60%;
+    height: 60%;
+    left: 15%;
+    top: 20%;
+}
+
 footer {
     position: fixed;
     height: 100px;

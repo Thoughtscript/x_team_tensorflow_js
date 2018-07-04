@@ -15,6 +15,10 @@ Views:
     http://localhost:7777/aapl
 ```
 
+# Licensing
+
+MIT Licensed!
+
 # Shout Outs
 
 1. **TensorFlow's** Official <a href="https://www.tensorflow.org/tutorials/deep_cnn">**CNN**</a> Article!

@@ -23,6 +23,7 @@ module.exports = {
       .use(require('cookie-parser')())
 
       .use('/', require('./viewcontroller'))
+      .use('/api', require('./api'))
 
     const listener = app.listen(c.expressPort, err => {
       if (err) console.error(err)
