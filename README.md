@@ -2,6 +2,16 @@
 
 X-Team <a href="https://js.tensorflow.org/">**TensorFlow.js**</a> Stock Prediction Example.
 
+# Examples
+
+Logic training with `100` epochs:
+
+![100](https://github.com/Thoughtscript/x_team_tensorflow_js/blob/master/images/Logic100.PNG)
+
+Logic training with `1200` epochs:
+
+![1200](https://github.com/Thoughtscript/x_team_tensorflow_js/blob/master/images/Logic1200.PNG)
+
 # Installation and Set Up
 
 Setup instructions:
