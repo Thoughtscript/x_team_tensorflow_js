@@ -1,6 +1,6 @@
 // ***********************************
 // *                                 *
-// *    Team TensorFlow.js - Logic   *
+// *  X-Team TensorFlow.js - Logic   *
 // *                                 *
 // ***********************************
 
@@ -52,6 +52,8 @@ const data = {
 
 /**
  * TensorFlow.js
+ *
+ * See: https://medium.com/tensorflow/a-gentle-introduction-to-tensorflow-js-dba2e5257702
  */
 
 const ann = function (op, units, shape, cycles) {
