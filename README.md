@@ -34,3 +34,4 @@ MIT Licensed!
 
 1. **TensorFlow's** Official <a href="https://www.tensorflow.org/tutorials/deep_cnn">**CNN**</a> Article!
 2. **Firdaouss Doukkali's** great introductory <a href="https://medium.com/@phidaouss/convolutional-neural-networks-cnn-or-convnets-d7c688b0a207">**article**</a>!
+3. Special thanks to <a href="https://medium.com/tensorflow/a-gentle-introduction-to-tensorflow-js-dba2e5257702">**Zaid Alyafeai**</a> for several crystal-clear code samples!

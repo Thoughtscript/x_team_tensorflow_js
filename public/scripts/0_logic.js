@@ -86,7 +86,7 @@ const ann = function (op, units, shape, cycles) {
  * Init
  */
 
-print('Beginning tests at ' + new Date() + '... this may take a while!')
+print('Beginning Logic ANN tests at ' + new Date() + '... this may take a while!')
 ann('xor', 8, 2, 100).then(function (a) {
   ann('or', 8, 2, 100).then(function (b) {
     ann('and', 8, 2, 100).then(function (c) {

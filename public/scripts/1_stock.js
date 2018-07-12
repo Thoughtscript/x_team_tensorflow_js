@@ -24,7 +24,7 @@ const fetchWrapper = function (url) {
         return r
       })
       .then(function (secondSuccess) {
-        return resolve(JSON.stringify(secondSuccess))
+        return resolve(secondSuccess.data)
       })
   })
 }

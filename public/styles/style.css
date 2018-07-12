@@ -49,7 +49,7 @@ main {
     opacity: .7
 }
 
-.logic {
+.logic, .cnn, .aapl {
     position: relative;
     color: white;
     width: 60%;
