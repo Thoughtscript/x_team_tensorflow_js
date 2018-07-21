@@ -39,8 +39,6 @@ const buildCnn = function (data) {
       strides: [2]
     }))
 
-    //model.add(tf.layers.flatten({inputShape: [7, 7, 256]}))
-
     model.add(tf.layers.dense({
       units: 10,
       kernelInitializer: 'VarianceScaling',
@@ -49,7 +47,8 @@ const buildCnn = function (data) {
 
     return resolve({
       'model': model,
-      'data': data
+      'out': model.getLayer('dense_Dense1'),
+      'originalData': data
     })
   })
 }
@@ -63,25 +62,18 @@ const buildCnn = function (data) {
 const cnn = function (model, data, cycles) {
   const tdates = tf.tensor1d(data.dates),
     thighs = tf.tensor1d(data.highs),
-    test = tf.tensor1d(d.test_times),
-    out = model.getLayer('dense_Dense1')
-
-  //console.log(tdates)
-  //console.log(thighs)
+    test = tf.tensor1d(d.test_times)
 
   modelHelper(model)
-
-  //console.log(tdates.reshape([1, 1960, 1]))
-  //console.log(thighs.reshape([1, 1960, 1]))
 
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
       try {
         model.compile({optimizer: 'sgd', loss: 'binaryCrossentropy', lr: 0.1})
-        /**
+
          model.fit(
-         tdates.reshape([1, 1960, 1]),
-         thighs.reshape([1, 1960, 1]), {
+           tdates,
+           thighs, {
             batchSize: 3,
             epochs: cycles
           }).then(function () {
@@ -91,7 +83,7 @@ const cnn = function (model, data, cycles) {
           print(d.test_highs)
           resolve(print(''))
         })
-         */
+
       } catch (ex) {
         resolve(print(ex))
       }
@@ -107,7 +99,7 @@ print('Beginning AAPL CNN tests at ' + new Date() + '... this may take a while!'
 fetchWrapper('http://localhost:5555/api/').then(function (data) {
   prep(data).then(function (result) {
     buildCnn(result).then(function (built) {
-      cnn(built.model, built.data, 100).then(function (e) {
+      cnn(built.model, built.originalData, 100).then(function (e) {
         print('Completed tests at ' + new Date() + '... thanks for waiting!')
       })
     })

@@ -22,8 +22,8 @@ Setup instructions:
 
 Views:
 ```
-    http://localhost:7777/logic
-    http://localhost:7777/aapl
+    http://localhost:5555/logic
+    http://localhost:5555/aapl
 ```
 
 # Licensing
