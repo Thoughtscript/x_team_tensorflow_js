@@ -11,6 +11,7 @@ const express = require('express'),
 publicapi
   .get("/", async (req, res) => {
     let reponseData = await data
+    console.log(reponseData);
     return res.send({status: 200, data: reponseData});
   })
 

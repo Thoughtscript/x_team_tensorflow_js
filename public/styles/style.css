@@ -31,8 +31,8 @@ ul > li {
 ul > li > a {
     text-decoration: none;
     color: white;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
     top: 22px;
     position: relative
 }
@@ -49,7 +49,7 @@ main {
     opacity: .7
 }
 
-.logic, .cnn, .aapl {
+.logic, .cnn, .rnn {
     position: relative;
     color: white;
     width: 60%;

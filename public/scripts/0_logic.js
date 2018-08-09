@@ -87,10 +87,10 @@ const ann = function (op, units, shape, cycles) {
  */
 
 print('Beginning Logic ANN tests at ' + new Date() + '... this may take a while!')
-ann('xor', 8, 2, 100).then(function (a) {
-  ann('or', 8, 2, 100).then(function (b) {
-    ann('and', 8, 2, 100).then(function (c) {
-      ann('implies', 8, 2, 100).then(function (d) {
+ann('xor', 8, 2, 1000).then(function (a) {
+  ann('or', 8, 2, 1000).then(function (b) {
+    ann('and', 8, 2, 1000).then(function (c) {
+      ann('implies', 8, 2, 1000).then(function (d) {
         ann('negation', 4, 1, 100).then(function (e) {
           print('Completed tests at ' + new Date() + '... thanks for waiting!')
         })

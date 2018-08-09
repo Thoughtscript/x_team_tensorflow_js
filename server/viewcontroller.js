@@ -9,7 +9,8 @@ const express = require('express'),
 
 view
   .get('/', (req, res) => res.render('logic.ejs'))
-  .get('/aapl', (req, res) => res.render('aapl.ejs'))
+  .get('/cnn', (req, res) => res.render('cnn.ejs'))
+  .get('/rnn', (req, res) => res.render('rnn.ejs'))
   .get('/logic', (req, res) => res.render('logic.ejs'))
 
 console.log(`View controller initialized!`)
