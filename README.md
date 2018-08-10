@@ -1,6 +1,8 @@
 # x_team_tensorflow_js
 
-X-Team <a href="https://js.tensorflow.org/">**TensorFlow.js**</a> Stock Prediction Example.
+WIP: X-Team <a href="https://js.tensorflow.org/">**TensorFlow.js**</a> Stock Prediction Example.
+
+Presently only the `Logic` example is 100% - it includes all basic logic operations implemented in client-side TensorFlow.js RNN.
 
 # Examples
 
@@ -18,7 +20,7 @@ Setup and installation instructions:
 
 ### Linux
 
-In order to improve performance and better leverage parallel, asynchronous processes this example was rearchitected with most of the work put into the server.
+In order to improve performance and better leverage parallel, asynchronous, processes this example was rearchitected with most of the work put into the server.
 
 We now make heavy use of the great **npm** libraries:
 
@@ -79,7 +81,7 @@ MIT Licensed!
 
 # Shout Outs
 
-To my knowledge this is perhaps one of the first fully JavaScript **Stock Prediction** examples (either using a *Recurrent Neural Net* or a *Convolutional Neural Net*):
+To my knowledge this is perhaps one of the first 100% JavaScript **Stock Prediction** examples (either using a *Recurrent Neural Net* or a *Convolutional Neural Net*) and probably the first for TensorFlow.js:
 
 1. **John Murphy's** outstanding <a href="https://www.linkedin.com/pulse/trading-penny-stocks-nodejs-robinhood-api-john-murphy/">**pure-node implementation**</a>.
 2. **karthikbadam's** <a href="https://github.com/encog/encog-javascript">**Encog-based**</a> <a href="https://github.com/karthikbadam/TimeFork">**TimeFork**</a>.
