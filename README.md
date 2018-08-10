@@ -14,19 +14,21 @@ Logic training with `1200` epochs:
 
 # Installation and Set Up
 
+Setup and installation instructions:
+
+### Linux
+
 In order to improve performance and better leverage parallel, asynchronous processes this example was rearchitected with most of the work put into the server.
 
-We know make heavy use of the great **npm** libraries:
+We now make heavy use of the great **npm** libraries:
 
 1. <a href="https://github.com/tensorflow/tfjs">**tfjs**</a>.
 2. <a href="https://github.com/tensorflow/tfjs-node">**tfjs-node**</a>.
 3. <a href="https://github.com/tensorflow/tfjs-node-gpu">**tfjs-node-gpu**</a>.
 
-But as a result of that, this example <a href="https://stackoverflow.com/questions/51004170/unable-to-npm-install-tensorflow-tfjs-node">requires using Linux</a> in order to achieve full functionality!
+And as a result of that, this example <a href="https://stackoverflow.com/questions/51004170/unable-to-npm-install-tensorflow-tfjs-node">requires using Linux</a> in order to achieve full functionality!
 
-On Windows, this can be accomplished using the new Linux Subsystem: see this great<a href="https://blogs.msdn.microsoft.com/commandline/2017/10/27/running-node-js-on-wsl-from-visual-studio-code/">article</a>.
-
-For NVM on Linux:
+**For NVM on Linux:**
 
 ```bash
 #!/usr/bin/env bash
@@ -36,7 +38,27 @@ sudo apt-get update
 
 echo "Installing NVM"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh | bash
+
+echo "Installing Linux Dependencies"
+sudo apt-get install build-essentials
 ```
+
+**For NVM on Windows Linux Subsystem:**
+
+***(This approach is recommended for running the app only!)***
+
+1. See this great <a href="https://blogs.msdn.microsoft.com/commandline/2017/10/27/running-node-js-on-wsl-from-visual-studio-code/">article</a> for more!
+2. Access your Linux workspace <a href="https://www.howtogeek.com/261383/how-to-access-your-ubuntu-bash-files-in-windows-and-your-windows-system-drive-in-bash/">**directly in your usual Windows text-editor**</a>.
+
+E.g. - Access this repo in Windows directory: `C:\Users\MY_WINDOWS_USER\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_7...c\LocalState\rootfs\home\u\x_team_tensorflow_js`
+
+3. If you run into an <a href="https://github.com/Microsoft/WSL/issues/14">**Error: EACCESS: permission denied**</a> issue during installation try:
+
+```bash
+    $ sudo chown -R u:p node_modules
+    $ sudo chown -R u:p u/.nvm
+```
+### Node and NPM
 
 Setup instructions:
 ```bash
@@ -47,7 +69,8 @@ Setup instructions:
 Views:
 ```
     http://localhost:5555/logic
-    http://localhost:5555/aapl
+    http://localhost:5555/cnn
+    http://localhost:5555/rnn
 ```
 
 # Licensing
